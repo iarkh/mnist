@@ -24,7 +24,7 @@ class NeuralNetwork(nn.Module):
             nn.Linear(512, 512),
             nn.ReLU(),
             nn.Linear(512, 10),
-            nn.ReLU()
+            # nn.ReLU() # nn.Softmax(dim=1) does not help
         )
 
     def forward(self, x):
